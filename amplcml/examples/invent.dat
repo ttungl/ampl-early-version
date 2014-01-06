@@ -1,0 +1,18 @@
+# invent
+
+param n :=4;
+
+param Demand :=
+1	50
+2	65
+3	100
+4	70;
+
+param Cost :=
+1	5
+2	8
+3	4
+4	7;
+
+param Store_Cost := 2;
+param Price := 6;

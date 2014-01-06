@@ -1,0 +1,64 @@
+#data
+# scenario: 4-core and 2-core communication
+#
+param tsd := 8; 	# num of traffic demand from source nodes
+			 
+param psd := 8; 	# num of paths from a source to a destination
+
+param l_n := 8;	# num of long links
+
+param e_m := 5;  # num of short links
+
+param alpha : 1   2  3  4  5  6  7  8:=
+			1 100 70 60 200 300 90 80 60
+			2 50  80  80  90  100  150  200  400
+			3 80  60  50  90  80   150  350  250			
+			4 20  200  100  200  250 240  60  330
+			5 140 190  40 180 210  230  80  400
+			6 250 200  50 60  150  290  300  330
+			7 280 130  230  300  400  500  300  200			
+			8 220 70  200  500  400  300  200  300;
+
+param W_n := 1 150
+			 2 150
+			 3 150
+			 4 270
+			 5 270
+			 6 270
+			 7 270
+			 8 270;	# (unit: Gbps) bandwidth capacity of long link l_n (non-uniform)
+
+param W_e := 1 250
+			 2 250
+			 3 250
+			 4 250
+			 5 250
+			 ;	# (unit: Gbps) bandwidth capacity of short link e_m (uniform)
+
+param T_d := 1 100
+			 2 100
+			 3 100
+			 4 100
+			 5 100
+			 6 100
+			 7 100
+			 8 100;	# traffic demand from source to destination
+
+param Cost := 	1 10
+				2 10
+				3 10
+				4 10
+				5 10
+				6 10
+				7 10
+				8 10; # the cost of long links in the network
+
+## end of file
+
+
+
+
+
+
+
+

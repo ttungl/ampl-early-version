@@ -1,0 +1,30 @@
+# running script
+
+# reset: the buffer needs to be reset to avoid the old values.
+reset;
+
+# change the solver
+option solver cplexamp;
+#option solver minos;
+
+# load the model
+model examples/pp1-2.mod;
+
+# load the data
+data examples/pp1-2.dat;
+
+# solve
+solve;
+
+# show the results
+#display Total_Cost;
+display Optimal_cost;
+
+
+# others display
+#display steel_usage, cost_steel, start_inv;
+display Long_Links, Short_Links, Traffic_Demands, W_n, W_e, T_d; 
+display x, alpha;
+
+# show 
+show Long_Links, Short_Links, Traffic_Demands;
