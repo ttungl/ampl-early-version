@@ -8,23 +8,31 @@ option solver cplexamp;
 #option solver minos;
 
 # load the model
-model examples/pp1-2.mod;
+model examples/pp1-5.mod;
+#model examples/transport1.mod;
 
 # load the data
-data examples/pp1-2.dat;
+data examples/pp1-5.dat;
+#data examples/transport1.dat;
 
 # solve
 solve;
 
 # show the results
 #display Total_Cost;
-display Optimal_cost;
+display Optimal_Cost;
 
 
 # others display
 #display steel_usage, cost_steel, start_inv;
-display Long_Links, Short_Links, Traffic_Demands, W_n, W_e, T_d; 
-display x, alpha;
+#display Long_Links, Short_Links, Traffic_Demands, W_n, W_e, T_d; 
+#display x, alpha;
+
+display LongLinks, ShortLinks, TrafficDemands;
+display TSD, PSD, Wn, We, Td;
+display alpha, x;
+
+display long_links_const, short_links_const, traffic_demands_const;
 
 # show 
-show Long_Links, Short_Links, Traffic_Demands;
+#show Long_Links, Short_Links, Traffic_Demands;
